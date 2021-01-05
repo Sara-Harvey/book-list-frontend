@@ -1,4 +1,5 @@
 import React from 'react';
+import BookCard from "./BookCard";
 import "./index.css";
 
 const books = [
@@ -12,7 +13,9 @@ render() {
   return (
       <div className="App">
       {books.map((book) => (
-        <h2 key={book.id}>{book.title}</h2>
+      < BookCard book={book} />  
+
+        //<h2 key={book.id}>{book.title}</h2>
         ))}
       </div>
     );

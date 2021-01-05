@@ -12,10 +12,8 @@ export default class App extends React.Component {
 render() {
   return (
       <div className="App">
-      {books.map((book) => (
-      < BookCard book={book} />  
-
-        //<h2 key={book.id}>{book.title}</h2>
+        {books.map((book) => (
+          < BookCard book={book} />
         ))}
       </div>
     );

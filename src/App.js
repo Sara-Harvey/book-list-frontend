@@ -1,23 +1,12 @@
-import './index.css';
+import React from 'react';
+import "./index.css";
 
-function App() {
+export default class App extends React.Component {
+render() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Fresh new app! <code>src/App.js</code>.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>Welcome to BookList</h1>
     </div>
-  );
+    );
+  }
 }
-
-export default App;

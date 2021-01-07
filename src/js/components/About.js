@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
-    <div><h1>Be peaceful, kind and accepting.</h1></div> 
+    <div><h1>Hey now, don't dream it's over.</h1></div> 
   );
 };
 

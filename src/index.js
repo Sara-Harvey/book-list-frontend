@@ -1,10 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {createStore, applyMiddleware} from 'redux';
-import thunk from 'redux-thunk';
-import {Provider} from 'react-redux';
-//import store from './store.js'
-import './index.css';
-import App from './App';
+import React from 'react'
+import { render } from "react-dom";
+import { Provider } from "react-redux";
+import store from "./js/store/index";
+import App from "./App";
+import './index.css'
+import index from "./js/index";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);

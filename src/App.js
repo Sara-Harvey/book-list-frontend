@@ -1,21 +1,25 @@
 import React from 'react';
-import BookCard from "./BookCard";
 import "./index.css";
 
-const books = [
-{id: 1, title: 'Lucky', author: 'Gabrielle Bell', category: 'Comic'},
-{id: 2, title: 'Total Cat Mojo', author: 'Jackson Galaxy', category: 'Non-ficiton'},
-{id: 3, title: 'Boys of Alabama', author: 'Genevieve Hudson', category: 'Fiction'},
-]
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
 
 export default class App extends React.Component {
 render() {
   return (
+
+    <Router>
       <div className="App">
-        {books.map((book) => (
-          < BookCard book={book} />
-        ))}
+
+        <Switch>
+			<Route exact path='/' component={Home}/>  	
+            <Route exact path='/about' component={About}/>
+        </Switch>
+
       </div>
+    </Router>
+
     );
   }
 }

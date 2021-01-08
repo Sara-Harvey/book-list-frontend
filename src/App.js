@@ -1,5 +1,5 @@
 import React from 'react';
-import Watch from './js/components/Watch';
+import Listen from './js/components/Listen';
 import Read from './js/components/Read';
 import Random from './js/components/Random';
 import "./index.css";
@@ -19,7 +19,7 @@ render() {
           <Switch>
             <Route exact path='/' component={Categories}/>    
             <Route exact path='/about' component={About}/>
-            <Route exact path='/watch' component={Watch}/>
+            <Route exact path='/listen' component={Listen}/>
             <Route exact path='/read' component={Read}/>
             <Route exact path='/random' component={Random}/>
           </Switch>

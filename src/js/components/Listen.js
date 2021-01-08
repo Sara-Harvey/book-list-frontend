@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getData } from "../actions/index";
 
-export class Watch extends Component {
+export class Listen extends Component {
   constructor(props) {
     super(props);
   }
@@ -14,7 +14,7 @@ export class Watch extends Component {
   render() {
     return (
       <ul>
-        {this.props.items.map(el => (
+        {this.props.stories.map(el => (
           <li key={el.id}>{el.title}</li>
         ))}
       </ul>
@@ -24,11 +24,11 @@ export class Watch extends Component {
 
 function mapStateToProps(state) {
   return {
-    items: state.remoteItems.slice(0, 10)
+    stories: state.remoteStories.slice(0, 10)
   };
 }
 
 export default connect(
   mapStateToProps,
   { getData }
-)(Watch);
+)(Listen);

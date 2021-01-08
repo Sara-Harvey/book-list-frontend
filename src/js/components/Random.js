@@ -14,7 +14,7 @@ export class Random extends Component {
   render() {
     return (
       <ul>
-        {this.props.items.map(el => (
+        {this.props.stories.map(el => (
           <li key={el.id}>{el.title}</li>
         ))}
       </ul>
@@ -24,7 +24,7 @@ export class Random extends Component {
 
 function mapStateToProps(state) {
   return {
-    items: state.remoteItems.slice(0, 10)
+    stories: state.remoteStories.slice(0, 10)
   };
 }
 

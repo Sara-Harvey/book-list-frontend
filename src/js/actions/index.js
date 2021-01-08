@@ -1,7 +1,7 @@
-import { ADD_ITEM } from "../constants/action-types";
+import { ADD_STORY } from "../constants/action-types";
 
-export function addItem(payload) {
-  return { type: ADD_ITEM, payload };
+export function addStory(payload) {
+  return { type: ADD_STORY, payload };
 }
 
 export function getData() {

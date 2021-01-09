@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getData } from "../actions/index";
 
-export class Random extends Component {
+export class Listen extends Component {
   constructor(props) {
     super(props);
   }
@@ -14,8 +14,14 @@ export class Random extends Component {
   render() {
     return (
       <ul>
-        {this.props.stories.map(el => (
-          <li key={el.id}>{el.title}</li>
+        {this.props.data.map(data => (
+          <li key={data.id}>
+              <div class="name">{data.attributes.name}</div> 
+              <div class="author">by {data.attributes.author}</div>
+              <div class="description">{data.attributes.description}</div>
+              <div class="link"><a href={data.attributes.link}>Link</a></div>
+              <div class="category"><p>Category: {data.attributes.category.name}</p></div>
+            </li>
         ))}
       </ul>
     );
@@ -24,11 +30,11 @@ export class Random extends Component {
 
 function mapStateToProps(state) {
   return {
-    stories: state.remoteStories.slice(0, 10)
+    data: state.remoteStories
   };
 }
 
 export default connect(
   mapStateToProps,
   { getData }
-)(Random);
+)(Listen);

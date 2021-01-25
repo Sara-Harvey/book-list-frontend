@@ -1,35 +1,36 @@
 import React from 'react';
 
-import Listen from './js/components/Listen';
-import Read from './js/components/Read';
-import Random from './js/components/Random';
-import Categories from './js/components/Categories';
-import About from './js/components/About';
+import ListenContainer from './containers/ListenContainer';
+import ReadContainer from './containers/ReadContainer';
+import RandomContainer from './containers/RandomContainer';
+
+import Categories from './components/Categories';
+import About from './components/About';
 
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import "./index.css";
 
 
-export default class App extends React.Component {
+class App extends React.Component {
 
   render() {
     return (
       <div>
 
         <Router>
-          <div className="App">
+          <div>
 
             <Switch>
               <Route exact path='/' component={Categories}/>    
               <Route exact path='/about' component={About}/>
-              <Route exact path='/listen' component={Listen}/>
-              <Route exact path='/read' component={Read}/>
-              <Route exact path='/random' component={Random}/>
+              <Route exact path='/listen' component={ListenContainer}/>
+              <Route exact path='/read' component={ReadContainer}/>
+              <Route exact path='/random' component={RandomContainer}/>
             </Switch>
           </div>
         </Router>    
 
-        <div class="not-nav">
+        <div className="not-nav">
           <div><h3><a href="http://localhost:3000/">Home</a></h3></div>
           <div><h3><a href="http://localhost:3000/read">Read</a></h3></div>
           <div><h3><a href="http://localhost:3000/listen">Listen</a></h3></div>
@@ -41,3 +42,5 @@ export default class App extends React.Component {
       );
     }
 }
+
+export default App;

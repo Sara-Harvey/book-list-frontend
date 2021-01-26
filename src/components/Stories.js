@@ -5,7 +5,7 @@ const Stories = ({stories}) => {
 
     return (
         <div>
-         { stories.map(story => {
+         { stories && stories.map(story => {
              return (
                 <Story story={story} key={story.id} />
              )

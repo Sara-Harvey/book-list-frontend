@@ -28,14 +28,7 @@ class App extends React.Component {
               <Route exact path='/random' component={RandomContainer}/>
             </Switch>
           </div>
-        </Router>    
-
-        <div className="not-nav">
-          <div><h3><a href="http://localhost:3000/">Home</a></h3></div>
-          <div><h3><a href="http://localhost:3000/read">Read</a></h3></div>
-          <div><h3><a href="http://localhost:3000/listen">Listen</a></h3></div>
-          <div><h3><a href="http://localhost:3000/random">Random</a></h3></div>
-        </div>
+        </Router>
 
       </div>
 

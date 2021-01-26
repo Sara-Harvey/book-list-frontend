@@ -1,32 +1,29 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { getData } from '../actions/index.js';
+import Stories from '../components/Stories';
 
 export class ListenContainer extends Component {
-
-constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     this.props.getData();
   }
 
   render() {
+
+    const {stories} = this.props;
+
     return (
-      <ul>
-        { this.props.data.map(data => (
-          <li key={data.id}>
-            <div>{data.attributes.name}</div>
-          </li>
-        ))}
-      </ul>
+      <div>
+        <Stories stories={stories} />
+      </div>
+
     );
   }
 }
-//
+
   const mapStateToProps = state => {      
-      return { data: state.stories };
+      return { stories: state.stories };
   };
 
 export default connect(mapStateToProps, {getData})(ListenContainer);

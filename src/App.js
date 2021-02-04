@@ -1,11 +1,8 @@
 import React from 'react';
 
-import ListenContainer from './containers/ListenContainer';
-import ReadContainer from './containers/ReadContainer';
+import Home from './components/Home';
+import StoryContainer from './containers/StoryContainer';
 import RandomContainer from './containers/RandomContainer';
-
-import Categories from './components/Categories';
-import About from './components/About';
 
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import "./index.css";
@@ -19,21 +16,27 @@ class App extends React.Component {
 
         <Router>
           <div>
-
             <Switch>
-              <Route exact path='/' component={Categories}/>    
-              <Route exact path='/about' component={About}/>
-              <Route exact path='/listen' component={ListenContainer}/>
-              <Route exact path='/read' component={ReadContainer}/>
+              <Route exact path='/' component={Home}/>
               <Route exact path='/random' component={RandomContainer}/>
+              <Route path='/categories/:id/stories' component={StoryContainer}/>            
             </Switch>
           </div>
         </Router>
+    
+    <div>
+      <p>NAV</p>
+      <p><a href="http://localhost:3000/categories/1/stories">Read</a></p>
+      <p><a href="http://localhost:3000/categories/2/stories">Listen</a></p>
 
-      </div>
+      <p><a href="http://localhost:3000/random">Random</a></p>
+      <p><a href="http://localhost:3000/">Home</a></p>
+    </div>
 
-      );
-    }
+    </div>
+
+    );
+  }
 }
 
 export default App;

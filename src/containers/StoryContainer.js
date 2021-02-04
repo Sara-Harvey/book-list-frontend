@@ -12,20 +12,15 @@ export class StoryContainer extends Component {
   };
 
   render() {
-    const {stories} = this.props;
-    let randomNumber = 0;
-
-    randomNumber = (arry=[]) => {
-        var num = Math.floor(Math.random() * arry.length);
-        this.randomNumber = num;
-    }
-
-
+    let categoryId = Number(this.props.match.params.id)
+    let selectedCat = this.props.stories.filter(story => {
+      return story.attributes.category.id === categoryId})
+    let stories = selectedCat
 
     return (
       <div>
-      <h3>A random story to read or hear</h3>
-        <Stories stories={stories[this.randomNumber]} />
+      <h3>Check out these stories</h3>
+        <Stories stories={stories} />
       </div>
 
     );

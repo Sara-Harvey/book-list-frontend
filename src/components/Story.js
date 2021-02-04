@@ -5,12 +5,11 @@ const Story = ({ story }) => {
 	return (
 		<div className="story">
 
-	        <h4 className="name">{story.attributes.name}</h4> 
-	        <p className="author>">by {story.attributes.author}</p>
-	        <p className="description">{story.attributes.description}</p>
-	        <p className="link"><a href={story.attributes.link}>Link</a></p>
-	        <p className="category">Category: {story.attributes.category.name}</p>
-		    
+	        <h4>{story.attributes.name}</h4> 
+	        <p>by {story.attributes.author}</p>
+	        <p>{story.attributes.description}</p>
+	        <p><a href={story.attributes.link}>Link</a></p>
+	        <p>Category {story.attributes.category.id}: {story.attributes.category.name}</p>		    
 		</div>
 	  )
 }

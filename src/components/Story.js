@@ -9,7 +9,7 @@ const Story = ({ story }) => {
 	        <p>by {story.attributes.author}</p>
 	        <p>{story.attributes.description}</p>
 	        <p><a href={story.attributes.link}>Link</a></p>
-	        <p>Category {story.attributes.category.id}: {story.attributes.category.name}</p>		    
+	        <p>{story.attributes.category.name}</p>		    
 		</div>
 	  )
 }

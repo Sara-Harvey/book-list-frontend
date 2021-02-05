@@ -27,7 +27,7 @@ class App extends React.Component {
     <div>
       <p>NAV</p>
       <p><a href="http://localhost:3000/categories/1/stories">Read</a></p>
-      <p><a href="http://localhost:3000/categories/2/stories">Listen</a></p>
+      <p><a href="http://localhost:3000/categories/2/stories">Hear</a></p>
 
       <p><a href="http://localhost:3000/random">Random</a></p>
       <p><a href="http://localhost:3000/">Home</a></p>

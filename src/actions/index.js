@@ -4,10 +4,6 @@ const category_list = [
 	{name: "random"}
 	];
 
-export function showCategories(payload) {
-	return {type: 'SHOW_CATEGORIES', payload: category_list}
-};
-
 export function getData() {
   return (dispatch) => {
     dispatch({ type: 'START_ADDING_DATA'});
@@ -16,3 +12,14 @@ export function getData() {
           .then(json => dispatch({ type: 'DATA_LOADED', payload: json.data }))
     };
 }
+
+export function chooseRandom() {
+  return {
+    type: 'CHOOSE_RANDOM', payload: randomRoll(),
+  }
+}
+
+function randomPick() {
+  return Math.floor(Math.random() * 6) + 1;
+}
+

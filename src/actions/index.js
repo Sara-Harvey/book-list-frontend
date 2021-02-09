@@ -15,7 +15,7 @@ export function getData() {
 
 export function chooseRandom() {
   return {
-    type: 'CHOOSE_RANDOM', payload: randomRoll(),
+    type: 'CHOOSE_RANDOM', payload: randomPick(),
   }
 }
 

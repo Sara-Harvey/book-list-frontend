@@ -4,7 +4,7 @@ They say that any emotion only lasts for two minutes. The Two-Minute Media app g
 The backend repo is here: https://github.com/Sara-Harvey/two-min-media-api, 
 and the API is live on Heroku, here: https://two-min-media-api.herokuapp.com/stories.
 
-## Code License:
+### Code License:
 
 https://opensource.org/licenses/MIT
 

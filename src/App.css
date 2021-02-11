@@ -1,0 +1,21 @@
+.header {
+  text-align: center;
+}
+
+.jumbotron {
+  /*background: url("/img/kite.jpg") no-repeat center center fixed; */
+  background-size: cover;
+    color: #fff;
+    min-height: 500px;
+  }
+
+.story-button {
+  background-color: lightgreen; /* Green */
+  border-radius: 8px;
+  color: white;
+  padding: 8px 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

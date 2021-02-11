@@ -1,9 +1,3 @@
-const category_list = [
-	{name: "read", id: 1}, 
-	{name: "listen", id: 2}, 
-	{name: "random"}
-	];
-
 export function getData() {
   return (dispatch) => {
     dispatch({ type: 'START_ADDING_DATA'});
@@ -13,13 +7,13 @@ export function getData() {
     };
 }
 
-export function chooseRandom() {
-  return {
-    type: 'CHOOSE_RANDOM', payload: randomPick(),
-  }
-}
+//export function chooseRandom() {
+//  return {
+//    type: 'CHOOSE_RANDOM', payload: randomPick(),
+//  }
+//}
 
-function randomPick() {
-  return Math.floor(Math.random() * 6) + 1;
-}
+//function randomPick() {
+//  return Math.floor(Math.random() * 6) + 1;
+//}
 

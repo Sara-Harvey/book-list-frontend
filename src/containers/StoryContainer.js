@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import Stories from '../components/Stories';
 import { getData } from '../actions/index.js';
 
+import Card from 'react-bootstrap/Card'
+import CardDeck from 'react-bootstrap/CardDeck'
 
 export class StoryContainer extends Component {  
 
@@ -19,7 +21,15 @@ export class StoryContainer extends Component {
 
     return (
       <div>
-      <h3>Check out these stories</h3>
+      
+      <CardDeck>
+        <Card>
+          <Card.Body>
+            <Card.Title>Check out these stories</Card.Title>
+          </Card.Body> 
+        </Card>
+      </CardDeck>
+
         <Stories stories={stories} />
       </div>
 

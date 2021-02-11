@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
-import Badge from 'react-bootstrap/Badge';
 
 const Story = ({ story }) => {
 

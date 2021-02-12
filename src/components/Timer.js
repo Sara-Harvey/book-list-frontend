@@ -59,5 +59,3 @@ class Example extends React.Component {
 }
 
 export default Example;
-
-//https://stackoverflow.com/questions/40885923/countdown-timer-in-react

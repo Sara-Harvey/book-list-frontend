@@ -24,7 +24,7 @@ const Home = () => {
         <Timer/>
         </h4>
 
-  	    <div><br></br><br></br><br></br><br></br>
+  	    <div><br></br><br></br><br></br>
         
         <h2 className="text-center">
           <Badge  pill variant="light" as={Link} to='/categories/1/stories'>Read</Badge>

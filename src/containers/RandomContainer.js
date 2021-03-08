@@ -19,18 +19,16 @@ class RandomContainer extends Component {
 
     return (
           <div>
-                    <CardDeck>
-        <Card>
-          <Card.Body>
-            <Card.Title>A random story to read or hear</Card.Title>
-          </Card.Body> 
-        </Card>
-      </CardDeck>
 
+          <CardDeck>
+            <Card>
+              <Card.Body>
+                <Card.Title>A random story to read or hear</Card.Title>
+              </Card.Body> 
+            </Card>
+          </CardDeck>
 
-
-
-              <Stories stories={stories} />            
+            <Stories stories={stories} />            
           </div>
         ); 
       }

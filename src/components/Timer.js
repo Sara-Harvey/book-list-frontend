@@ -5,10 +5,8 @@ function MyTimer({ expiryTimestamp }) {
   const {
     seconds,
     minutes,
-    hours,
-    days,
     isRunning,
-    start,
+    //start,
     pause,
     resume,
     restart,

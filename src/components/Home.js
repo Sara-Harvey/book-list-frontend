@@ -29,9 +29,10 @@ const Home = () => {
         <h2 className="text-center">
           <Badge  pill variant="light" as={Link} to='/categories/1/stories'>Read</Badge>
 			    <Badge  pill variant="light" as={Link} to='/categories/2/stories'>Hear</Badge>
-        	<Badge  pill variant="light" as={Link} to='/random'>Random</Badge>
+          <Badge  pill variant="light" as={Link} to='/random'>Random</Badge>
+          <Badge  pill variant="light" as={Link} to='/newstory'>Add a story</Badge>
         </h2>
-        </div>  
+        </div>
 
         </>
       </div>

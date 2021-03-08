@@ -9,6 +9,7 @@ function Header() {
       <Navbar.Brand as={Link} to='/categories/1/stories'><h5>Read</h5></Navbar.Brand>
       <Navbar.Brand as={Link} to='/categories/2/stories'><h5>Hear</h5></Navbar.Brand>
       <Navbar.Brand as={Link} to='/random'><h5>Random</h5></Navbar.Brand>
+      <Navbar.Brand as={Link} to='/newstory'><h5>Add a story</h5></Navbar.Brand>
     </Navbar>
   )
 }

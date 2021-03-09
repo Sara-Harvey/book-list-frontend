@@ -1,5 +1,7 @@
 const initialState = {
-  stories: []
+  stories: [],
+  story: [],
+  loading: true
 };
 
 function rootReducer(state = initialState, action) {
@@ -16,10 +18,11 @@ function rootReducer(state = initialState, action) {
   }
 
   if (action.type === "DELETE_STORY") {
-    return Object.delete({}, state, {
-      stories: state.stories.concat(action.payload)
-    });
-  }
+    const stories = state.stories.filter(story => story.id !== action.payload.id);
+    return {
+      stories
+    };
+  }      
   
   return state;
 }

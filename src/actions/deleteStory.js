@@ -1,7 +1,7 @@
-export function deleteStory(story) {
+export function deleteStory(id, story) {
   return (dispatch) => {
     dispatch({ type: 'LOADING' })
-    fetch('https://two-min-media-api.herokuapp.com/stories/stories/${story.id}', {
+    fetch(`https://two-min-media-api.herokuapp.com/stories/${story.id}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
@@ -10,7 +10,7 @@ export function deleteStory(story) {
       body: JSON.stringify(story)
     })
       .then(response => response.json())
-      .then(item => dispatch({ type: 'DELETE_STORY', payload: item})
+      .then(item => dispatch({ type: 'DELETE_STORY', payload: story})
       )
   }
 }

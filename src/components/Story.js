@@ -1,8 +1,15 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
+import { connect } from 'react-redux';
+import { deleteStory } from '../actions/deleteStory.js'
 
-const Story = ({ story }) => {
+function Story({ story, deleteStory }) {
+
+	function handleSubmit(event) {
+		event.preventDefault();
+		deleteStory(story.id, story)
+	}
 
 	return (
 		<CardDeck>
@@ -15,6 +22,7 @@ const Story = ({ story }) => {
 
 	        <p><a href={story.attributes.link}>Get the story here</a></p>
 	        <p>Category: {story.attributes.category.name}</p>
+	        <button onClick={handleSubmit}>delete</button>
 	        </Card.Body> 
 		  
 		  </Card>
@@ -22,4 +30,4 @@ const Story = ({ story }) => {
 	  );
 }
 
-export default Story;
+export default connect(null, {deleteStory}) (Story);

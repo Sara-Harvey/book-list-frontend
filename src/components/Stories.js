@@ -1,6 +1,5 @@
 import React from 'react';
 import Story from './Story';
-import { deleteStory } from '../actions/deleteStory.js'
 
 const Stories = ({stories}) => {
 

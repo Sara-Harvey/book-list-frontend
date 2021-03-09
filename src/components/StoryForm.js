@@ -1,8 +1,8 @@
 import React  from 'react'
-
 import { connect } from 'react-redux';
 import { addStory } from '../actions/addStory.js'
-
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 class NewContainer extends React.Component{
 
@@ -36,59 +36,60 @@ class NewContainer extends React.Component{
     render() { 
         return (
 
-            <div className="container text-center">
+        <div className="container text-center">
+          <h4>Add a story of your own</h4>
 
-              <form onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit}>
+                    
+              <Form.Group controlId="formBasicName">
+                <Form.Control 
+                type="text" 
+                name="name" 
+                value={this.state.name} 
+                onChange={this.handleChange} 
+                placeholder="title" />  
+              </Form.Group>
 
-                <input 
-                  type="text" 
-                  name="name" 
-                  placeholder="title"
-                  value={this.state.name}
-                  onChange={this.handleChange}
-                ></input>
-                <br />
+              <Form.Group controlId="formBasicAuthor">
+                <Form.Control 
+                type="text" 
+                name="author" 
+                value={this.state.author} 
+                onChange={this.handleChange} 
+                placeholder="author" />  
+              </Form.Group>
 
-                <input
-                  type="text"
-                  name="author"
-                  placeholder="author"
-                  value={this.state.author}
-                  onChange={this.handleChange}
-                ></input>
-                <br />
+              <Form.Group controlId="formBasicLink">
+                <Form.Control 
+                type="text" 
+                name="link" 
+                value={this.state.link} 
+                onChange={this.handleChange} 
+                placeholder="link" />  
+              </Form.Group>
 
-                <input
-                  type="text"
-                  name="description"
-                  placeholder="description"
-                  value={this.state.description}
-                  onChange={this.handleChange}
-                ></input>
-                <br />
+              <Form.Group controlId="formBasicDescription">
+                <Form.Control 
+                type="text" 
+                name="description" 
+                value={this.state.description} 
+                onChange={this.handleChange} 
+                placeholder="description" />  
+              </Form.Group>
 
-                <input
-                  type="text"
-                  name="link"
-                  placeholder="link"
-                  value={this.state.link}
-                  onChange={this.handleChange}
-                ></input>
-                <br />
-
-                <input
-                  type="number"
-                  name="category_id"
-                  placeholder="category"
-                  value={this.state.category_id}
-                  onChange={this.handleChange}
-                ></input>
-                <br />
-
-                <button>Add story</button>
-
-              </form>
-            </div>
+              <Form.Group controlId="formBasicCategory">
+                <Form.Control 
+                type="text" 
+                name="category_id" 
+                value={this.state.category_id} 
+                onChange={this.handleChange} 
+                placeholder="category" />  
+              </Form.Group>
+                    
+              <Button variant="primary" type="submit"> Add story </Button>
+            </Form>    
+          
+        </div>
         );
     }
 }
